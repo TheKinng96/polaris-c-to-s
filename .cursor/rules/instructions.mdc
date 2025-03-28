@@ -1,0 +1,67 @@
+---
+description: On designing and planning for the app
+globs: 
+alwaysApply: false
+---
+# Application Objectives
+## For Merchants
+Authentication:
+- Authenticate with ColorMe via OAuth.
+
+Data Migration:
+- Migrate customer, product, and order data to Shopify.
+
+Test migrations with a limited dataset (first 10 customers/products) under the free tier.
+
+Unlock full migrations with the paid tier.
+
+Conflict Resolution:
+- Handle data conflicts (e.g., duplicate records).
+- Progress Tracking:
+
+View real-time migration progress via visual indicators.
+
+## For the App Owner
+Admin Monitoring:
+- Access a server-side admin page that displays:
+  - Shop domain
+  - Installation date
+  - Subscription tier
+
+
+# Architecture & Design Patterns
+Architecture:
+- Microservices approach separating frontend and backend.
+
+Design Patterns:
+- Event-Driven: Use queues for handling long-running migrations.
+
+Singleton: Manage database and API client instances.
+
+Factory: Create importer objects for different data types.
+
+Batch Processing: Optimize handling of large data sets by processing in chunks.
+
+# Performance, Scalability & Error Handling
+Performance:
+- Batch Processing: Handle large data sets in chunks.
+- Concurrency: Utilize Go’s goroutines for parallel processing.
+- Caching: Implement caching strategies to reduce repetitive API calls.
+
+Scalability:
+- Design backend for horizontal scaling.
+- Start with SQLite, with plans to migrate to PostgreSQL as demand increases.
+
+Error Handling:
+- Maintain detailed logs for migration processes.
+- Provide clear UI feedback for errors and conflict resolution.
+
+# Compliance & Security
+Compliance:
+- GDPR-compliant data handling practices.
+- Adherence to Shopify App Store standards.
+
+Security:
+- Use HTTPS for all communications.
+- Secure token and key storage.
+- Store sensitive configuration in environment variables (.env).

@@ -1,0 +1,29 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Folder structure
+Folder Names: Always use camelCase (e.g. component1, component2, subcomponent1).
+Component Files: Always use PascalCase (e.g. Component1.tsx, Component2.tsx, SubComponent1.tsx, HelperComponent.tsx).
+
+Example Folder Structure
+```
+/src
+  /dashboard
+    ├── index.tsx                   // Dashboard main page
+    ├── components                  // Main components folder for dashboard (camelCase)
+    │   ├── index.ts                // Re-exports all dashboard components
+    │   ├── component1              // Component folder (camelCase)
+    │   │   ├── index.ts            // Re-exports Component1
+    │   │   ├── Component1.tsx      // Component file (PascalCase)
+    │   │   └── components          // Folder for subcomponents of Component1 (camelCase)
+    │   │       ├── index.ts        // Re-exports all subcomponents
+    │   │       └── subcomponent1    // Folder for a specific subcomponent (camelCase)
+    │   │           ├── index.ts    // Re-exports SubComponent1
+    │   │           └── SubComponent1.tsx  // Subcomponent file (PascalCase)
+    │   ├── component2              // Another component folder (camelCase)
+    │   │   ├── index.ts            // Re-exports Component2
+    │   │   └── Component2.tsx      // Component file (PascalCase)
+    │   └── HelperComponent.tsx     // A standalone helper component (PascalCase)
+```

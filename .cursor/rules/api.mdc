@@ -1,0 +1,17 @@
+---
+description: When request is API related
+globs: 
+alwaysApply: false
+---
+# APIs & External Integrations
+
+ColorMe API:
+- Fetch customer, product, and order data.
+- API document: https://developer.shop-pro.jp/docs/colorme-api
+
+Shopify Admin API:
+- Create and manage data within Shopify.
+
+Authentication:
+- OAuth: For ColorMe
+- Shopify App Bridge: For session management

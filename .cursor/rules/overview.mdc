@@ -1,0 +1,18 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+1. Project Overview
+Title: ColorMe to Shopify Migration App
+
+Description:
+A Shopify-embedded application that enables merchants to migrate customer, product, and order data from ColorMe by GMO to Shopify. The app is designed with two tiers:
+
+- Free Tier: Imports the first 10 customers and 10 products for testing.
+- Paid Tier: Provides unlimited migration with full data selection control.
+
+Technology Stack:
+- Backend: Golang (using Gin and Go’s html/template), ./backend
+- Frontend: Next.js with Shopify Polaris, ./c-to-s
+- Database: Prisma with SQLite (scalable to PostgreSQL), ./c-to-s

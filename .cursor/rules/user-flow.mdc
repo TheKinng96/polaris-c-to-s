@@ -1,0 +1,23 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# User Flow
+Installation:
+- Merchant installs the app from the Shopify App Store.
+
+Authentication:
+- Merchant authenticates with ColorMe via OAuth.
+
+Plan Selection:
+- Free Tier: Imports first 10 customers and products (sorted by ID).
+- Paid Tier: Unlocks full migration with customizable data selection.
+
+Migration Process:
+- Merchant initiates migration via the dashboard.
+- Data is imported with conflict resolution prompts.
+- Migration progress is displayed in real time.
+
+Finalization:
+- A final report summarizes the migration results.

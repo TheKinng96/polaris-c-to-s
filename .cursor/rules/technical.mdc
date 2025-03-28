@@ -1,0 +1,93 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Technical Specifications
+## Coding Standards
+Languages:
+Go: Follow Effective Go guidelines; use GoDoc for documentation.
+
+TypeScript: Use ESLint with the Airbnb style guide and format with Prettier; add JSDoc comments.
+
+## Frontend
+Framework: Remix
+
+UI Library: Shopify Polaris
+
+Integration: Shopify App Bridge for seamless embedding
+
+File Structure Example:
+
+```
+/c-to-s
+├── app
+│   ├── components
+│   │   ├── ConflictResolver.tsx    // Conflict resolution UI
+│   │   └── ProgressBar.tsx         // Migration progress bar component
+│   ├── routes
+│   │   ├── index.tsx               // Migration dashboard (landing page)
+│   │   ├── migrate.tsx             // Migration process page
+│   │   └── api.auth.ts             // API route for ColorMe OAuth
+│   ├── styles
+│   │   └── global.css              // Global CSS styles
+│   ├── root.tsx                    // Root component: sets up layout, links, etc.
+│   └── entry.client.tsx            // Client entry file for Remix
+├── public                        // Static assets (images, icons, etc.)
+│   └── images
+│       └── logo.png
+├── package.json                  // Project metadata and dependencies
+├── remix.config.js               // Remix configuration file
+└── tsconfig.json                 // TypeScript configuration
+```
+
+## Backend
+Language: Golang
+
+Web Framework: Gin for API endpoints and serving admin pages
+
+Templating: Go’s `html/template` for server-side rendering
+
+Database:
+
+Primary: Prisma with SQLite for temporary storage
+
+Future: PostgreSQL for scalability
+
+File Structure Example:
+```
+/backend
+├── /cmd
+│   └── main.go              # Application entry point
+├── /internal
+│   ├── /api
+│   │   └── handler.go       # API handlers
+│   ├── /migration
+│   │   ├── customer.go      # Customer migration logic
+│   │   ├── product.go       # Product migration logic
+│   │   └── order.go         # Order migration logic
+│   ├── /database
+│   │   └── prisma.go        # Prisma setup and configuration
+│   └── /admin
+│       ├── handler.go       # Admin page request handlers
+│       └── templates
+│           └── shops.html   # HTML template for admin page
+├── /pkg
+│   └── utils.go             # Utility functions
+└── go.mod                   # Go module file
+```
+
+# Testing
+Write unit tests for data mapping.
+
+Create integration tests for API endpoints.
+
+Version Control & Documentation:
+
+Use Git with descriptive commit messages.
+
+Document setup and architecture in a comprehensive README.md.
+
+Environment Management:
+
+Store secrets and configuration in environment variables (.env).

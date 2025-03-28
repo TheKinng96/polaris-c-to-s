@@ -1,0 +1,20 @@
+---
+description: When working on the admin page on backend folder
+globs: 
+alwaysApply: false
+---
+# Admin Page
+Purpose:
+- Monitor Shopify stores using the app.
+
+Location:
+- Served from the Go backend at /admin/shops.
+
+Rendering:
+- Server-side rendered using Go’s html/template.
+
+Access:
+- Secured with basic authentication (e.g., username/password).
+
+Displayed Data:
+- Shop domain, installation date, subscription tier.
